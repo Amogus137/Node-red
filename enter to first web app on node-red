@@ -1,0 +1,57 @@
+[
+    {
+        "id": "bc122338fbc7bb03",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "c51d21b9cecfa90e",
+        "type": "http in",
+        "z": "bc122338fbc7bb03",
+        "name": "first web",
+        "url": "/web",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 140,
+        "y": 420,
+        "wires": [
+            [
+                "e3ea953f34753810"
+            ]
+        ]
+    },
+    {
+        "id": "738cbfc30f755f3c",
+        "type": "http response",
+        "z": "bc122338fbc7bb03",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 470,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "e3ea953f34753810",
+        "type": "template",
+        "z": "bc122338fbc7bb03",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "python",
+        "syntax": "mustache",
+        "template": "<h2>Menu 1</h2>\n <p>It is Node-RED sample webpage.</p>\n <hr>\n <h2>Menu 2</h2>\n <p>It is Node-RED sample webpage.</p>\n </body>\n</html>",
+        "output": "str",
+        "x": 340,
+        "y": 400,
+        "wires": [
+            [
+                "738cbfc30f755f3c"
+            ]
+        ]
+    }
+]
